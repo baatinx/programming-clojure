@@ -1,0 +1,8 @@
+1. All Clojure functions implement Callable and Runnable
+
+2. Symbols are names that refer to things
+
+3. vectors are sequential, indexed collections. Lists are sequential collections stored as a linked list.
+   Sets are unordered collections.Sets are a good choice when you want fast addition and removal of elements 
+   and the ability to quickly check for whether a set contains a value.
+   Clojure maps are collections of key/value pairs, Like sets, maps are also unordered 
