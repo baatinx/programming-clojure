@@ -6,3 +6,5 @@
    Sets are unordered collections.Sets are a good choice when you want fast addition and removal of elements 
    and the ability to quickly check for whether a set contains a value.
    Clojure maps are collections of key/value pairs, Like sets, maps are also unordered 
+
+4. If you see the phrase “foo changes x,” mentally substitute “foo returns a changed copy of x.”
