@@ -8,3 +8,6 @@
    Clojure maps are collections of key/value pairs, Like sets, maps are also unordered 
 
 4. If you see the phrase “foo changes x,” mentally substitute “foo returns a changed copy of x.”
+
+5. Whenever a structure-specific function like subvec duplicates functionality already available in the sequence library,
+   it’s probably there for performance
