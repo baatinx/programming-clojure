@@ -11,3 +11,32 @@
 
 5. Whenever a structure-specific function like subvec duplicates functionality already available in the sequence library,
    it’s probably there for performance
+
+6. Functional programming leads to code that is easier to write, read, test, and reuse.
+
+7. A pure function has no side effects; that is, it doesn’t depend on anything but its arguments, and its only influence 
+   on the outside world is through its return value.
+
+8. You never have to worry about when to call a pure function, since it always returns the same thing.
+   Impure functions, on the other hand, do not play well with lazy techniques. As a programmer, you must explicitly
+   control when an impure function is called, because if you call it at some other time, it may behave differently! 
+
+9. Functional code improves reuse. To reuse code, you must be able to do the following:
+    a. Find and understand a piece of useful code.
+    b. Compose the reusable code with other code.
+
+10. For years, programmers have used encapsulation to try to create composable code. Encapsulation creates a firewall, 
+    providing access to data only through a public API
+    Impure functions violate encapsulation, because they let the outside world reach in (invisibly!) and change the behavior 
+    of your code. Pure functions, on the other hand, are truly encapsulated and composable. Put them anywhere you want in a system,
+    and they will always behave in the same way.
+
+11. A recursive definition consists of two parts:
+     a. A "basis" which explicitly enumerates some members of the sequence
+     b. An "induction" which provides rules for combining members of the sequence to
+        produce additional members
+
+12. Languages can perform tail-call optimization (TCO), converting tail recursions into iterations 
+     that don’t consume the stack
+
+13. 
