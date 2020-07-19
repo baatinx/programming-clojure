@@ -107,3 +107,18 @@
 
 (take 10000 (fibo))
 ;; => (0N 1N 1N 2N 3N 5N 8N 13N 21N 34N ...)
+
+(lazy-cat [1 2 3] '(4 5 6))
+;; => (1 2 3 4 5 6)
+
+(defn n-repeat [n] (lazy-cat (repeat n n) (n-repeat (inc n))))
+(take 6 (n-repeat 1))
+;; => (1 2 2 3 3 3)
+
+
+(def head-fibo (lazy-cat [0 1]  (map +
+                                     head-fibo
+                                     (rest head-fibo))))
+https://groups.google.com/forum/#!topic/clojure/leQICeA9w_o
+http://clojurescriptmadeeasy.com/blog/how-to-follow-recursion-with-lazy-sequences.html
+https://stackoverflow.com/questions/2214258/holding-onto-the-head-of-a-sequence

@@ -37,6 +37,7 @@
         produce additional members
 
 12. Languages can perform tail-call optimization (TCO), converting tail recursions into iterations 
-     that don’t consume the stack
+    that don’t consume the stack
 
-13. 
+13. When writing Clojure programs, you should prefer lazy sequences over loop/recur for any
+    sequence that varies in size and for any large sequence.
